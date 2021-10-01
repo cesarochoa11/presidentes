@@ -1,0 +1,356 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+html{
+    font-family: times;
+    font-size: 19px;
+	color: #1d2225; 
+}
+
+/* Maqueta */
+
+#contenedor{
+    width:95%;
+    max-width:1500px; /*ancho maximo*/
+    margin:0 auto;/*atajo -> margin: top-bottom left-right*/
+}
+
+
+.header{
+        background-color:red;
+        text-align: center;
+        margin-bottom: 5px;
+	
+	width:100%;
+		max-height: 150px;
+	animation-name: logo1;
+	animation-duration: 1s;
+	animation-delay: 0s;
+        }
+@keyframes logo1{
+	/*Instancia inicial*/
+	0%{
+		opacity: 0.2;
+		color:white;
+		transform: translateY(-200px);
+	}
+	/*In. final*/
+	100%{
+		opacity:1;
+		color:rgba(75,83,194,0.54);
+		transform: translateY(0);
+	}
+}
+.header img {width: 30%; 
+	margin-top:20px;
+}
+
+
+
+.navbar{
+    background: #1d2225;
+    color: #f0eeed;
+    /* padding:2%;  */
+    text-align:end;
+	padding-right: 30px;
+    }
+    /* Menu principal */
+    .navbar ul{
+        list-style-type: none;
+        }
+        .navbar ul li{
+            /* float:left; */
+            display:inline-block;
+            }
+            .navbar ul li a{
+                color:white;
+                text-decoration: none;
+                padding:15px;
+                display: block;
+                }
+                /* pseudo-clases */
+                /* :hover -> sobre elemento */
+                .navbar ul li a:hover{
+                    /* text-decoration:underline; */
+                    background: white;
+                    color:rgb(4, 4, 70);
+                }
+                /* :active -> clic activo o sostenido */
+                .navbar ul li a:active{
+                    background: rgba(255, 255, 255, 0.555);
+                    border-radius:5px;
+                    
+                }
+
+                .active{
+                    background: red;
+                    color:rgb(4, 4, 70) ;
+                }
+                /* 
+                active segun Fede
+                .active{
+                    background: red;
+                    color:rgb(4, 4, 70) ;
+                    padding:15px;
+                    display: block;
+                }
+                */
+
+        /* .notaSimple:hover{
+            background: red;
+        } */
+
+
+
+
+
+
+
+
+/* Contenido */
+
+    /* modelo de caja
+    El ancho real de los bloques -> width + padding + border
+    la propiedad box-sizing arregla esta suma, liberando todo el ancho al width
+    */
+
+.principal{
+    /* 80% + 4% + 4px */
+    box-sizing: border-box;
+    width:100%;
+    padding:2%;
+    /* border:2px solid; */
+    background-color:#c6c7c7;
+    float:center; 
+    }
+
+    .highlight1{
+		border-radius:10px;
+        background-color: #f0eeed;
+        padding: 15px;
+        margin-bottom: 30px;
+        }
+        .highlight1 .txt1{
+            float: left;
+            width: 60%;
+			padding: 150px;
+        }
+        .highlight1 .img1{
+            float: right;
+            width: 40%;
+            max-height: 600px;
+            overflow: hidden;
+			
+        }
+        .highlight1 figure img{
+            width:100%;
+			border-radius: 20px;
+
+        }
+        .limpiarFloat{
+            clear:both;
+        }
+
+.capas {width: 100%; display: flex; flex-flow: wrap; text-align: center; padding-left:5px; padding-right: 5px;}
+
+    .simpleIzq{
+        background-color: #f0eeed;
+        padding: 15px;
+        width: 33%;
+        float:left;
+        margin-bottom: 15px;
+		border-radius:10px;
+    }
+    .simpleDer{
+        background-color: #f0eeed;
+        padding: 15px;
+        width: 33%;
+        float:right;
+        margin-bottom: 15px;
+		border-radius:10px;
+    }
+
+.simpleCent{
+        background-color: #f0eeed;
+        padding: 15px;
+        width: 33%;
+	text-align: center;
+        margin-bottom: 15px;
+		margin-right:5px;
+	margin-left:5px;
+	border-radius:10px;
+    }
+.principal img {border-radius:5px;}
+
+    .imgNota{
+        width:100%;
+    }
+
+    /*Anidar Selectores -> "espacio" o >*/
+    .breadcrumb{
+        padding:1%;
+        background: rgb(46, 133, 233);
+        color:white;
+        margin-bottom: 2%;
+        width:60%;
+    }
+    .breadcrumb a{
+        color:white;
+        /* text-decoration-style:solid;
+        text-decoration-thickness: 2px;
+        text-decoration-color: red ; */
+        text-decoration: underline dotted red 2px ;
+
+    }
+
+    .notaSimple{
+        padding-left: 310px;
+		padding-right: 310px;
+      
+        }
+        .notaSimple figure{
+            border:1px solid white;
+            border-radius: 20px;
+            overflow:hidden;
+			width: 100%;
+		margin-left: auto; margin-right: auto;
+}
+.textofondo {margin-top: 20px;}
+.abajo { text-align: center;}
+.abajo p{ text-align: center;}
+
+        .notaSimple figure img{
+          -webkit-filter: grayscale(1);
+			width: 100%;
+        }
+        .notaSimple h2{
+            margin:20px 0;
+            font-size:2em;
+			text-align: left;
+        }
+        .notaSimple h3{
+            margin:20px 0;
+            font-size: 1.3em;
+        }
+   
+        .notaSimple p{
+            margin-bottom: 20px;
+			font-size: 20px;
+			text-align: justify;
+        }
+
+        /* SASS - SCSS -> A pedido de Fede
+        .notaSimple{
+            color:blue;
+            a { 
+            }
+        }
+        */
+    
+
+
+
+
+
+.footer{
+    clear:both;
+    background: #1d2225;
+    padding: 4%;
+    text-align: center;
+	color: #c6c7c7;
+}
+.footer a{color: #c6c7c7;}
+
+
+
+
+.top {
+	position: fixed;
+	right: 0px;
+	bottom: 0px;
+	animation-name: hover2;
+	animation-duration: 2s;
+	animation-iteration-count: infinite;
+	
+	
+}
+.top img{
+			width: 80px;}
+.top:hover{
+		transform: scale(1,1);
+	}
+@keyframes hover2{
+		0%{transform: scale(0.9);}
+		50%{transform: scale(1.2);}
+		100%{transform: scale(0.9);}
+	}
+
+
+/* Formulario de contacto */
+.principal h2{
+    margin:20px 0;
+}
+#formContacto{
+    background: rgba(255, 255, 255, 0.301);
+    padding: 20px;
+    border-radius:10px;
+    width:70%;
+    margin: 0 auto;
+    }
+    #formContacto input{
+        width:100%;
+        padding: 10px;
+        margin-bottom: 15px;
+        border: none;
+        border-radius:3px;
+    }
+    /* 
+    Ojo con la especificidad, aplicando una clase a una etiqueta
+    .anchoAuto{
+        width: auto !important;
+    } */
+
+    #formContacto input[type="radio"]{
+        width:auto;
+        margin-right: 10px;
+    }
+    #formContacto input[type="checkbox"]{
+        width: auto;
+        margin-right: 10px;
+    }
+
+    #formContacto select{
+        width:100%;
+        padding: 10px;
+        margin-bottom: 15px;
+        border: none;
+        border-radius:3px;
+    }
+    #formContacto textarea{
+        width:100%;
+        padding: 10px;
+        margin-bottom: 15px;
+        border: none;
+        border-radius:3px;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 0.8em; /* valor heredado*/
+    }
+
+    #formContacto button[type="submit"]{
+        margin-top: 30px;
+        width:80%;
+        padding: 10px;
+        background: rgb(15, 15, 146);
+        color:white;
+        border:none;
+        margin-left: auto;
+        margin-right: auto;
+        display: block;
+        transition: 1s;
+    }
+    #formContacto button[type="submit"]:hover{
+            cursor: pointer;
+            background: rgb(76, 76, 233);
+        }
