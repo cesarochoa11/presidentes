@@ -352,3 +352,57 @@ html{
             cursor: pointer;
             background: rgb(76, 76, 233);
         }
+
+
+
+
+
+
+/* MOBILE */
+@media (min-width:0px) and (max-width: 767px){
+	.principal{width: 100%; }
+	
+	
+	.principal{width: 100%;}
+	
+	.notaSimple{
+        padding-left: 2px;
+		padding-right: 2px;
+      
+        }
+        .notaSimple figure{
+            border:1px solid white;
+            border-radius: 5px;
+            overflow:hidden;
+			width: 100%;
+		margin-left: auto; margin-right: auto;
+}
+.textofondo {margin-top: 16px;}
+.abajo { text-align: center;}
+.abajo p{ text-align: center;}
+
+        .notaSimple figure img{
+          -webkit-filter: grayscale(1);
+			width: 100%;
+        }
+        .notaSimple h2{
+            margin:20px 0;
+            font-size:2em;
+			text-align: left;
+        }
+        .notaSimple h3{
+            margin:5px 0;
+            font-size: 1.3em;
+        }
+   
+        .notaSimple p{
+            margin-bottom: 5px;
+			font-size: 16px;
+			text-align: justify;
+        }
+	
+	.display{display: none;}
+	
+	
+	
+}
